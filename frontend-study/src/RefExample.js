@@ -1,11 +1,13 @@
-import React, {useState} from "react";
+import React,{useState, useRef} from "react";
 
-function InputName(){
+function RefExample(){
 
     const [student, setStudent] = useState({
         name: '',
         id : ''
     });
+
+    const nameInput = useRef();
 
     const {name, id} = student;
 
@@ -22,12 +24,13 @@ function InputName(){
           name: '',
           nickname: '',
         });
+        nameInput.current.focus();
       };
 
     return(
         <div>
-            <h1>Ref 미사용 </h1>
-            <input name="name" placeholder="이름" onChange={onChange} value={name} />
+            <h1> Ref 사용 </h1>
+            <input name="name" placeholder="이름" onChange={onChange} value={name} ref={nameInput} />
             <input name="id" placeholder="학번" onChange={onChange} value={id} />
             <button onClick={onReset}>초기화</button>
             <div>
@@ -38,4 +41,4 @@ function InputName(){
     );
 }
 
-export default InputName;
+export default RefExample;
