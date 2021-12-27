@@ -4,12 +4,15 @@ function UseEffectExample() {
   const [count, setCount] = useState(0);
 
   useEffect(() => {
+    console.log("first");
+  }, []);
+  useEffect(() => {
     console.log("컴포넌트가 화면에 나타남 ");
     return () => {
-      console.log("컴포넌트가 화면에서 사라짐. 현재의 카운트 값:");
+      console.log("컴포넌트가 화면에서 사라짐.");
     };
   }, [count]);
-  console.log("rendering. 현재 카운트 값 : ");
+  console.log("rendering.");
 
   const increment = () => {
     setCount(count + 1);

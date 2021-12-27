@@ -1,6 +1,6 @@
 import React from "react";
 
-function CreateUser({ studentName, email, onChange, onCreate }) {
+function CreateStudent({ studentName, email, onChange, onCreate }) {
   return (
     <div>
       <input
@@ -20,4 +20,4 @@ function CreateUser({ studentName, email, onChange, onCreate }) {
   );
 }
 
-export default CreateUser;
+export default CreateStudent;
