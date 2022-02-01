@@ -1,11 +1,11 @@
 import React from "react";
 import "./App.css";
-import propsExample from "./example/propsExample";
+import WelcomeTitle from "./example/WelcomeTitle";
 
 function App() {
   return (
     <div className="App">
-      <propsExample name="yunseong" color="blue" />
+      <WelcomeTitle name="yunseong" color="blue" />
     </div>
   );
 }
