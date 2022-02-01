@@ -1,20 +1,46 @@
 import React, { useState } from "react";
 
 const InputSample = () => {
-  const [text, setText] = useState("");
+  const [user, setUser] = useState({
+    username: "",
+    id: "",
+  });
+
+  const { username, id } = user;
 
   const handleInputChange = (e) => {
-    setText(e.target.value);
+    const { value, name } = e.target;
+    setUser({
+      ...user,
+      [name]: value,
+    });
   };
 
   const handleClickResetButton = (e) => {
-    setText("");
+    setUser({
+      username: "",
+      id: "",
+    });
   };
+
   return (
     <div>
-      <input onChange={handleInputChange} value={text} />
-      <button onClick={handleClickResetButton}>reset</button>
-      <div>값: {text}</div>
+      <input
+        name="username"
+        placeholder="이름을 적어주세요.."
+        onChange={handleInputChange}
+        value={username}
+      />
+      <input
+        name="id"
+        placeholder="아이디를 적어주세요.."
+        onChange={handleInputChange}
+        value={id}
+      />
+      <button onClick={handleClickResetButton}>초기화</button>
+      <div>
+        값: {username}({id})
+      </div>
     </div>
   );
 };
