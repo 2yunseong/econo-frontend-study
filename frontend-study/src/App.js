@@ -1,11 +1,10 @@
 import React from "react";
 import "./App.css";
-import WelcomeTitle from "./example/WelcomeTitle";
-
+import Counter from "./counter/Counter";
 function App() {
   return (
     <div className="App">
-      <WelcomeTitle name="yunseong" color="blue" />
+      <Counter />
     </div>
   );
 }
