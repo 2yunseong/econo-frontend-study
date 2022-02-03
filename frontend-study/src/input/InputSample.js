@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 
 const InputSample = () => {
   const [user, setUser] = useState({
@@ -16,11 +16,14 @@ const InputSample = () => {
     });
   };
 
+  const userNameRef = useRef();
+
   const handleClickResetButton = (e) => {
     setUser({
       username: "",
       id: "",
     });
+    userNameRef.current.focus();
   };
 
   return (
@@ -30,6 +33,7 @@ const InputSample = () => {
         placeholder="이름을 적어주세요.."
         onChange={handleInputChange}
         value={username}
+        ref={userNameRef}
       />
       <input
         name="id"
