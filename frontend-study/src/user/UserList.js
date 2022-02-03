@@ -1,9 +1,9 @@
 import React from "react";
 
-const UserComponent = ({ id, username }) => {
+const UserComponent = ({ element }) => {
   return (
     <div>
-      {username}({id})
+      {element.username}({element.id})
     </div>
   );
 };
@@ -26,8 +26,8 @@ const UserList = () => {
 
   return (
     <>
-      {userArray.map((item) => (
-        <UserComponent id={item.id} username={item.username} />
+      {userArray.map((element) => (
+        <UserComponent user={element} />
       ))}
     </>
   );
