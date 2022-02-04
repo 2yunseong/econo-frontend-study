@@ -1,7 +1,7 @@
 import React from "react";
 import "./SelectButton.scss";
-const SelectButton = ({ children }) => {
-  return <button className="select-button">{children}</button>;
+const SelectButton = () => {
+  return <button className="select-button">BUTTON</button>;
 };
 
 export default SelectButton;
