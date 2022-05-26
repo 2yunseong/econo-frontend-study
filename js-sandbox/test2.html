@@ -1,0 +1,26 @@
+<!doctype html>
+<html>
+    <head>
+        <title>table 작성</title>
+    </head>
+    <body>
+        <table border="1" width="200" height="100">
+            <caption>도표작성-span사용</caption>
+            <tr>
+                <td rowspan="3">A</td>
+                <td colspan="2">B</td>
+            </tr>
+            <tr>
+                <td rowspan="2">C</td>
+                <td>D</td>
+            </tr>
+           <tr><td>E</td></tr>
+        </table>
+        <pre>
+            ___________________
+            |     |_____B_____|
+            |  A  |  C  |__D__|
+            |_____|_____|__E__|
+        </pre>
+    </body>
+</html>
